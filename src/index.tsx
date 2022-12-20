@@ -1,15 +1,23 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-const content = (
-    <div>
-        <ul>
-            <li>List item 1</li>
-            <li>List item 2</li>
-        </ul>
-        <p>Hello World</p>
-    </div>
-)
+function App() {
+    return (
+        <div>
+            <h1>Hello React</h1>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Impedit aperiam vero dolore sapiente eum harum et blanditiis ab
+                cum quisquam, sunt mollitia vel optio explicabo numquam error
+                ullam maiores. Sunt?
+            </p>
+        </div>
+    )
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
-root.render(<React.StrictMode>{content}</React.StrictMode>)
+root.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
+)
