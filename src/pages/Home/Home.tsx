@@ -6,7 +6,12 @@ type Props = {}
 const Home = (props: Props) => {
     return (
         <>
-            <Typography variant="h4" component="h1" align="center">
+            <Typography
+                variant="h4"
+                component="h1"
+                align="center"
+                sx={{ marginBottom: '30px' }}
+            >
                 List of Products
             </Typography>
             <ProductsList />
