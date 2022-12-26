@@ -21,9 +21,11 @@ type State = {
     count: number
 }
 
+const ProductMinQuantity = 1
+
 class ProductsListItem extends Component<Props, State> {
     state = {
-        count: 1,
+        count: ProductMinQuantity,
     }
 
     onIncrement = () => {
@@ -58,7 +60,11 @@ class ProductsListItem extends Component<Props, State> {
                         <span>Price:</span> {price}$
                     </div>
                     <div className="product-quantity">
-                        <Button variant="outlined" onClick={this.onDecrement}>
+                        <Button
+                            variant="outlined"
+                            onClick={this.onDecrement}
+                            disabled={this.state.count === ProductMinQuantity}
+                        >
                             -
                         </Button>
                         <TextField value={this.state.count} size="small" />
