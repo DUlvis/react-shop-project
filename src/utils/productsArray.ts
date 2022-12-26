@@ -6,6 +6,7 @@ type ProductProps = {
     type: string
     capacity: string
     price: number
+    image: string
 }
 
 const productsArray:ProductProps[] = [
@@ -15,7 +16,8 @@ const productsArray:ProductProps[] = [
         desc:"This is iPhone 14 Pro",
         type:"phone",
         capacity:"256",
-        price:1000
+        price:1000,
+        image:"/images/iphone-purple.jpg"
     },
     {
         id:2,
@@ -23,7 +25,8 @@ const productsArray:ProductProps[] = [
         desc:"This is iPhone 13 Pro",
         type:"phone",
         capacity:"256",
-        price:1000
+        price:1000,
+        image:"/images/iphone-gold.jpg"
     },
     {
         id:3,
@@ -31,7 +34,8 @@ const productsArray:ProductProps[] = [
         desc:"This is iPhone 13",
         type:"phone",
         capacity:"64",
-        price:2000
+        price:2000,
+        image:"/images/iphone-green.jpg"
     },
     {
         id:4,
@@ -39,7 +43,8 @@ const productsArray:ProductProps[] = [
         desc:"This is iPhone 11 Pro",
         type:"phone",
         capacity:"256",
-        price:1000
+        price:1000,
+        image:"/images/iphone-white.jpg"
     },
     {
         id:5,
@@ -47,7 +52,8 @@ const productsArray:ProductProps[] = [
         desc:"This is iPhone 14 Pro MAX",
         type:"phone",
         capacity:"512",
-        price:1500
+        price:1500,
+        image:"/images/iphone-red.jpg"
     },
     {
         id:6,
@@ -55,7 +61,8 @@ const productsArray:ProductProps[] = [
         desc:"This is iPhone X",
         type:"phone",
         capacity:"64",
-        price:500
+        price:500,
+        image:"/images/iphone-black.jpg"
     }
 
 ]
