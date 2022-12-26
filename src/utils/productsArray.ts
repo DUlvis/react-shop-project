@@ -49,7 +49,7 @@ const productsArray:ProductProps[] = [
     {
         id:5,
         title:"iPhone 13 Pro MAX",
-        desc:"This is iPhone 14 Pro MAX",
+        desc:"This is iPhone 13 Pro MAX",
         type:"phone",
         capacity:"512",
         price:1500,
