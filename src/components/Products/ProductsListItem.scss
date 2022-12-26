@@ -36,4 +36,11 @@
         display: flex;
         justify-content: center;
     }
+    .product-quantity{
+        display: flex;
+        margin-top: 15px;
+        input{
+            text-align: center;
+        }
+    }
 }
