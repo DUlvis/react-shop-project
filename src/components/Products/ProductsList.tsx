@@ -3,6 +3,7 @@ import productsArray from 'utils/productsArray'
 import ProductsListItem from './ProductsListItem'
 
 type ProductProps = {
+    id: number
     title: string
     desc: string
     type: string
@@ -24,10 +25,17 @@ const ProductsList = (props: Props) => {
             >
                 {productsArray.map(
                     (
-                        { title, desc, type, capacity, price }: ProductProps,
+                        {
+                            id,
+                            title,
+                            desc,
+                            type,
+                            capacity,
+                            price,
+                        }: ProductProps,
                         i
                     ) => (
-                        <Grid item xs={12} sm={6} md={4} key={i}>
+                        <Grid item xs={12} sm={6} md={4} key={id}>
                             <ProductsListItem
                                 title={title}
                                 desc={desc}
