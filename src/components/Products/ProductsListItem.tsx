@@ -19,16 +19,30 @@ type Props = {
 
 type State = {
     count: number
+    color: string
 }
 
 class ProductsListItem extends Component<Props, State> {
     state = {
         count: 1,
+        color: 'green',
     }
 
     onIncrement = () => {
         this.setState((prevState: State) => ({
             count: prevState.count + 1,
+        }))
+    }
+
+    onDecrement = () => {
+        this.setState((prevState: State) => ({
+            count: prevState.count - 1,
+        }))
+    }
+
+    changeColor = () => {
+        this.setState((prevState: State) => ({
+            color: prevState.color === 'green' ? 'red' : 'green',
         }))
     }
 
@@ -51,8 +65,18 @@ class ProductsListItem extends Component<Props, State> {
                     <div className="product-price">
                         <span>Price:</span> {price}$
                     </div>
+                    <div>Color:{this.state.color}</div>
+                    <button onClick={() => this.changeColor()}>
+                        Change color
+                    </button>
                     <div className="product-quantity">
-                        <Button variant="outlined">-</Button>
+                        <Button
+                            variant="outlined"
+                            onClick={this.onDecrement}
+                            disabled={this.state.count <= 1}
+                        >
+                            -
+                        </Button>
                         <TextField value={this.state.count} size="small" />
                         <Button variant="outlined" onClick={this.onIncrement}>
                             +
