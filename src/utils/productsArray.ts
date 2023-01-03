@@ -25,7 +25,7 @@ const productsArray:ProductProps[] = [
         desc:"This is iPhone 13 Pro",
         type:"phone",
         capacity:"256",
-        price:1000,
+        price:500,
         image:"/images/iphone-gold.jpg"
     },
     {
