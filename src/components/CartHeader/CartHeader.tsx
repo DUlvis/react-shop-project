@@ -1,4 +1,5 @@
 import './CartHeader.scss'
+import productsArray from 'utils/productsArray'
 
 type Props = {
     productsInCart: {
@@ -11,7 +12,8 @@ const CartHeader = ({ productsInCart }: Props) => {
         <div>
             {Object.keys(productsInCart).map((productId) => (
                 <div key={productId}>
-                    {productId}:{productsInCart[parseInt(productId)]}
+                    {productsArray[parseInt(productId) - 1].title} :{' '}
+                    {productsInCart[parseInt(productId)]}
                 </div>
             ))}
         </div>
