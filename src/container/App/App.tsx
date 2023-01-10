@@ -18,6 +18,13 @@ const App = () => {
             [id]: (prevState[id] || 0) + count,
         }))
     }
+    const changeProductToCart = (id: number, count: number) => {
+        console.log(id, count)
+        if (productsInCart[id]) {
+            productsInCart[id] = count
+        }
+        console.log(productsInCart)
+    }
 
     const removeProductFromCart = (id: number) =>
         setProductsInCart((prevState: ProductsInCart) => omit(prevState, [id]))
@@ -30,6 +37,7 @@ const App = () => {
                 addProductToCart={addProductToCart}
                 productsInCart={productsInCart}
                 removeProductFromCart={removeProductFromCart}
+                changeProductToCart={changeProductToCart}
             />
         </StyledEngineProvider>
     )
