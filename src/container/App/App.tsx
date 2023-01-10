@@ -20,10 +20,10 @@ const App = () => {
     }
     const changeProductToCart = (id: number, count: number) => {
         console.log(id, count)
-        if (productsInCart[id]) {
-            productsInCart[id] = count
-        }
-        console.log(productsInCart)
+        setProductsInCart((prevState: ProductsInCart) => ({
+            ...prevState,
+            [id]: count,
+        }))
     }
 
     const removeProductFromCart = (id: number) =>
