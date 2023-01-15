@@ -10,7 +10,10 @@ type ProductsInCart = {
 }
 
 const App = () => {
-    const [productsInCart, setProductsInCart] = useState<ProductsInCart>({})
+    const [productsInCart, setProductsInCart] = useState<ProductsInCart>({
+        1: 5,
+        2: 1,
+    })
 
     const addProductToCart = (id: number, count: number) => {
         setProductsInCart((prevState: ProductsInCart) => ({
@@ -22,6 +25,13 @@ const App = () => {
     const removeProductFromCart = (id: number) =>
         setProductsInCart((prevState: ProductsInCart) => omit(prevState, [id]))
 
+    const changeProductQuantity = (id: number, count: number) => {
+        setProductsInCart((prevState: ProductsInCart) => ({
+            ...prevState,
+            [id]: count,
+        }))
+    }
+
     return (
         <StyledEngineProvider injectFirst>
             <CssBaseline />
@@ -30,6 +40,7 @@ const App = () => {
                 addProductToCart={addProductToCart}
                 productsInCart={productsInCart}
                 removeProductFromCart={removeProductFromCart}
+                changeProductQuantity={changeProductQuantity}
             />
         </StyledEngineProvider>
     )
