@@ -41,13 +41,12 @@ const ProductsListItem = ({
     const dispatch = useAppDispatch()
 
     return (
-        <Card
-            className="product"
-            variant="outlined"
-            onClick={() => dispatch(toggleLikeState(id))}
-        >
+        <Card className="product" variant="outlined">
             <CardContent>
-                <Button variant="outlined">
+                <Button
+                    variant="outlined"
+                    onClick={() => dispatch(toggleLikeState(id))}
+                >
                     {isLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
                 </Button>
                 <div className="product-img">
