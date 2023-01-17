@@ -6,6 +6,7 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
 import FavoriteIcon from '@mui/icons-material/Favorite'
 import { useAppDispatch, useAppSelector } from 'redux/hooks'
 import { toggleLikeState } from 'redux/likeReducer'
+import { addProductToCartss } from 'redux/cartReducer'
 
 type Props = {
     id: number
@@ -40,6 +41,9 @@ const ProductsListItem = ({
     const isLiked = useAppSelector((state) => state.likeProducts[id])
     const dispatch = useAppDispatch()
 
+    // const productsInCarts = useAppSelector((state) => state.productsInCart[id])
+    const addProductToCarts = useAppDispatch()
+
     return (
         <Card className="product" variant="outlined">
             <CardContent>
@@ -72,7 +76,7 @@ const ProductsListItem = ({
             <CardActions className="btns-wrap">
                 <Button
                     variant="outlined"
-                    onClick={() => addProductToCart(id, count)}
+                    onClick={() => addProductToCarts(addProductToCartss(id))}
                 >
                     Add to cart
                 </Button>
