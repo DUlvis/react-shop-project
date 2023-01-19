@@ -8,13 +8,7 @@ import CartHeader from 'components/CartHeader/CartHeader'
 import Logo from 'components/Logo/Logo'
 import './Header.scss'
 
-type Props = {
-    productsInCart: {
-        [id: number]: number
-    }
-}
-
-const Header = ({ productsInCart }: Props) => {
+const Header = () => {
     let appBar = false
     return (
         <>
