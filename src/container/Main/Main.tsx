@@ -33,7 +33,6 @@ const Main = ({
                     path="cart"
                     element={
                         <CartPage
-                            productsInCart={productsInCart}
                             removeProductFromCart={removeProductFromCart}
                             changeProductQuantity={changeProductQuantity}
                         />
