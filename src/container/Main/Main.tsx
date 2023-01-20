@@ -4,6 +4,7 @@ import CartPage from 'pages/CartPage/CartPage'
 import CheckoutPage from 'pages/CheckoutPage/CheckoutPage'
 import Home from 'pages/Home/Home'
 import PaymentPage from 'pages/PaymentPage/PaymentPage'
+import ProductPage from 'pages/ProductPage/ProductPage'
 import ShippingPage from 'pages/ShippingPage/ShippingPage'
 import { Route, Routes } from 'react-router-dom'
 
@@ -17,6 +18,7 @@ const Main = () => {
                 <Route path="payment" element={<PaymentPage />} />
                 <Route path="cart" element={<CartPage />} />
                 <Route path="checkout" element={<CheckoutPage />} />
+                <Route path="products/:id" element={<ProductPage />} />
             </Routes>
         </Container>
     )

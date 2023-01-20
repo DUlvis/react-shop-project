@@ -18,8 +18,6 @@ export const fetchProducts = createAsyncThunk(
             'https://run.mocky.io/v3/ea7b7859-1a85-421a-b5df-cd143774ded6'
         )
 
-        console.log(response)
-        console.log(response.data.products)
         return response.data.products
     }
 )
