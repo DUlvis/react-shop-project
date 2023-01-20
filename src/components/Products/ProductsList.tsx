@@ -1,10 +1,10 @@
 import { Grid } from '@mui/material'
-import productsArray from 'utils/productsArray'
+import { useAppSelector } from 'redux/hooks'
 import ProductsListItem from './ProductsListItem'
 
 type ProductProps = {
     id: number
-    title: string
+    name: string
     desc: string
     type: string
     capacity: string
@@ -13,6 +13,8 @@ type ProductProps = {
 }
 
 const ProductsList = () => {
+    const productsArray = useAppSelector((state) => state.products)
+
     return (
         <>
             <Grid
@@ -26,7 +28,7 @@ const ProductsList = () => {
                     (
                         {
                             id,
-                            title,
+                            name,
                             desc,
                             type,
                             capacity,
@@ -38,7 +40,7 @@ const ProductsList = () => {
                         <Grid item xs={12} sm={6} md={4} key={id}>
                             <ProductsListItem
                                 id={id}
-                                title={title}
+                                title={name}
                                 desc={desc}
                                 type={type}
                                 capacity={capacity}

@@ -8,7 +8,7 @@ type Props = {
 const CartProductsListItem = ({ product, productCount }: Props) => {
     return (
         <div>
-            {product.title} : {'  '}
+            {product.name} : {'  '}
             {productCount}
         </div>
     )

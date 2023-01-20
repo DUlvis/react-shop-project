@@ -21,7 +21,7 @@ const CartProductsListItemExtended = ({ productCount, product }: Props) => {
                     <div className="cart-img">
                         <img src={product.image} alt="" />
                     </div>
-                    <div>{product.title}</div>
+                    <div>{product.name}</div>
                     <p>Price for one item: {product.price}</p>
                     <p>Count: {productCount}</p>
                     <Quantity
